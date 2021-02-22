@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+
+<html lang="en" class=""><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Araceli Domínguez</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Araceli Dominguez portfolio" />
+		<meta name="keywords" content="website, html5, bootstrap, website, webpage, site, design,css3, mobile first, responsive, php, angularjs" />
+        <meta name="author" content="Araceli Dominguez" />
+
+        <!-- Facebook and Twitter inteagration -->
+        <meta property="og:title" content=""/>
+        <meta property="og:image" content=""/>
+        <meta property="og:url" content=""/>
+        <meta property="og:site_name" content=""/>
+        <meta property="og:description" content=""/>
+        <meta name="twitter:title" content="" />
+        <meta name="twitter:image" content="" />
+        <meta name="twitter:url" content="" />
+        <meta name="twitter:card" content="" />
+
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400, 900" rel="stylesheet">
+		<link media="all" rel="stylesheet" href="paracv/all.css">
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-134643844-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-134643844-1');
+</script>
+
+
+<style>
+	   #main:after,
+.w1:after,
+.clearfix:after{
+	content:'';
+	display:block;
+	clear:both;
+}
+/*html,body{
+	height: 100%;
+}*/
+body{
+	min-width:320px;
+	font: 300 16px/21px 'Fira Sans', sans-serif;
+	color: #181717;
+	background: #fff;
+	margin: 0;
+	-ms-text-size-adjust: none;
+	-webkit-text-size-adjust:none;
+	-ms-word-wrap: break-word;
+	word-wrap: break-word;
+}
+
+*{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+*:after,
+*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+ul{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: #0fa021;
+}
+a:hover{
+	text-decoration: underline;
+}
+.circle-box{
+	width: 55px;
+	height: 55px;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	border: 2px solid #0fa021;
+	color: #0fa021;
+	text-align: center;
+	font: 300 32px/35px 'Fira Sans', sans-serif;;
+	padding: 9px 0 0;
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+}
+
+.w1{
+	max-width: 1140px;
+	margin: 0 auto;
+	/*padding: 0 90px;*/
+}
+
+#main{
+	padding: 42px 0;
+	text-align: justify;
+}
+h2{
+	font: 300 26px/32px 'Open Sans', sans-serif;
+	margin: 0 0 20px;
+}
+h3{
+	font: 400 24px/30px 'Open Sans', sans-serif;
+	margin: 0 0 30px;
+}
+
+
+.bullets-list{
+	padding: 0;
+}
+.bullets-list li{
+	padding: 0 0 10px 15px;
+	position: relative;
+}
+.bullets-list li:before{
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 11px;
+	width: 3px;
+	height: 3px;
+	background: #181717;
+	border-radius: 50%;
+}
+.product-aside{
+	/*width: 225px;*/
+	padding: 20px 20px 30px;
+	background: #f5f5f5;
+}
+
+.aside-title{
+	display: block;
+	font: 400 19px/24px 'Open Sans', sans-serif;
+	text-align: center;
+	margin: 0 0 22px;
+}
+.candidate-table{
+	display: table;
+	width: 100%;
+	margin: 0 0 30px;
+	table-layout: fixed;
+	/*text-transform: capitalize;*/
+}
+.candidate-table:last-child{
+	margin: 0;
+}
+.candidate-table .candidate-cell{
+	display: table-cell;
+	vertical-align: middle;
+}
+.candidate-table .candidate-cell:first-child{
+	width: 75px;
+}
+.candidate-table .text{
+	display: block;
+	font-size: 15px;
+}
+
+.content-box{
+	margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+body {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.8;
+  color: #777;
+  background: #fff;
+}
+
+#page {
+  position: relative;
+  overflow-x: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+
+a {
+  color: #0fa021;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
+  transition: 0.5s;
+}
+a:hover, a:active, a:focus {
+  color: #0fa021;
+  outline: none;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, figure {
+  color: #000;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 400;
+  margin: 0 0 30px 0;
+}
+
+.gtco-contact-info {
+  margin-bottom: 30px;
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.gtco-contact-info ul {
+  padding: 0;
+  margin: 0;
+  clear: both;
+}
+  .nocapitalizacion{text-transform:none;font-size:13px;}
+  .nocapitalizacion11{text-transform:none;font-size:11px;}
+  .mainlinks{text-align:right;font-size:12px;}
+  .boldi{color: black;}
+	   </style>
+
+    </head>
+
+
+    <body>
+        <div id="page">
+
+            <div class="w1">
+                <div id="main">
+                    <div class="main-holder">
+                        <div class="float-box content-box">
+                            <div id="content">
+
+
+ <div><h1><span style="color: #0fa021; font-weight: bold;">Araceli</span> Domínguez</h1></div>
+ <div class="mainlinks"><span class="url"><a target="_blank" href="cv_araceliDominguez_ES.pdf">Descargar PDF</a> · <a href="english.html">English</a></span> </div>
+<div class="product-box" data-id="12898709">
+
+<div class="product-holder">
+        <div class="gtco-contact-info">
+                        <ul>
+
+                            <span class="email">
+                            <a href="#" onclick="JavaScript:window.location='mailto:'+'aracelidominguezmuelas'+'@'+'gmail'+'.com'" >
+                            <script language="JavaScript">
+                            document.write("aracelidominguezmuelas" + "@" + "gmail.com");
+                            </script>
+                            </a>
+                            </span>&nbsp;||&nbsp;
+                            <span class="url"><a href="http://www.aracelidominguez.com">www.aracelidominguez.com</a></span>
+                        </ul>
+                    </div>
+</div>
+</div>
+
+<div><h3>Sumario</h3></div>
+<div class="product-box" data-id="12898708">
+<div class="product-holder">
+
+       <!--  <div class="circle-box ">6</div> -->
+       Desarrollador <span class="boldi">Full Stack</span> con conocimientos en una amplia gama de aplicaciones, frameworks y lenguajes de programación que adopta nuevas tecnologías de forma regular integrando pasado, presente y futuro.<br>
+       Gran capacidad para identificar recursos, orientado al detalle, creativo y con talento para desarrollar soluciones elegantes en el menor tiempo posible.
+       <br>
+<img src="img/remote.png" style="vertical-align: middle; width: 20px;"> Experiencia en trabajo en remoto. Habilidad para la colaboración en equipo mientras se trabaja de forma independiente en entornos remotos.
+<br><img src="img/globe.png" style="vertical-align: middle; width: 20px;"> Experiencia laboral en España, Reino Unido, Francia y Estados Unidos.
+</div>
+</div>
+
+
+<div><h3>Competencias Técnicas</h3></div>
+<div class="product-box" data-id="12898707">
+<div class="product-holder">
+    <span style="color: #0fa021; text-decoration: underline;">Font End</span><br>
+    HTML5 | CSS3 | Bootstrap4 | LESS| SASS | JavaScript | ES6 | Ajax | Angular | Vue | jQuery | React | Redux | SOA | Webservices (REST, SOAP, XML, XSL/XSLT, JSON)
+    <br>
+    <span style="color: #0fa021; text-decoration: underline;">Back End</span><br>
+    PHP | Laravel | Symfony | Python | MySQL | SQL | SQL Server | Apache | Node.js | Express.js | Passport.js | OAuth | MongoDB | Mongoose OMD
+    <br>
+    <span style="color: #0fa021; text-decoration: underline;">Herramientas</span><br>
+    GIT | GRUNT | GULP | Postman | Google APIs | Facebook APIs
+    <br>Adobe Photoshop | Adobe XD prototyping
+    <br>Videoconferencia| File Sharing | Entornos de Oficina Virtual
+
+    <br>
+    <span style="color: #0fa021; text-decoration: underline;">CMS</span><br>
+    WordPress | PrestaShop
+    <br>
+    <span style="color: #0fa021; text-decoration: underline;">Móvil</span><br>
+    C++| Java | React Native
+
+</div>
+</div>
+
+<div><h3>Idiomas</h3></div>
+<div class="product-box" data-id="12898706">
+<div class="product-holder">
+Hablante nativo de español.
+Nivel C1 de inglés.
+Nivel B2 de francés.
+Nivel A2 de alemán.
+
+</div>
+</div>
+
+<div><h3>Experiencia profesional</h3></div>
+
+<div id="yw0" class="list-view">
+<div class="items">
+
+
+
+  <div class="product-box" data-id="12227714">
+  <div class="product-holder">
+  <span class="counter">1</span>
+
+  <h2>Senior developer  (2020 - presente)<br>BULEVIP, Granada. </h2>
+
+  <ul class="bullets-list">
+  <li>Back End con PHP frameworks (Symfony y Laravel). </li>
+<li>Desarrollo Front End con HTML + SCSS, React y vue.js.</li>
+<li>Sistema de contenedores Docker. Sistemas AMQP (Rabbit y Kafka). </li>
+<li>Sistemas de caché del lado del servidor (Phalcon, Varnish y Redis). </li>
+<li>Pruebas TDD, BDD, QA. Control de versiones GIT. </li>
+<li>PrestaShop.</li><br>
+    <img src="img/remote.png" style="vertical-align: middle; width: 20px;"> <span style="color:#4e5355">Trabajo en remoto</span>
+  </ul>
+  </div>
+  <div class="product-aside">
+      <span class="aside-title"></span>
+      <div class="candidate-table">
+          <div class="candidate-cell">
+              <div class="circle-box ">1</div>
+          </div>
+          <div class="candidate-cell">
+              <span class="text">año<br><span class="nocapitalizacion"></span></span>
+          </div>
+      </div>
+      <div class="candidate-table">
+          <div class="candidate-cell">
+              <div class="circle-box ">&copy;</div>
+          </div>
+          <div class="candidate-cell">
+              <span class="text">Marketplace</span>
+          </div>
+      </div>
+          <div class="candidate-table">
+          <div class="candidate-cell">
+              <div class="circle-box ">W</div>
+          </div>
+          <div class="candidate-cell">
+              <span class="text"><a href='https://www.bulevip.com' target='_blank' border=0><span class="nocapitalizacion">bulevip.com</span></a></span>
+          </div>
+      </div>
+  </div>
+  </div>
+
+
+
+
+
+<div class="product-box" data-id="128987714">
+<div class="product-holder">
+<span class="counter">2</span>
+
+ <h2>Lingüista computacional (2018 - 2020)<br>Grupo de Investigación LEXICON <br>(Universidad de Granada). </h2>
+
+<ul class="bullets-list">
+<li>Desarrollo de módulo de extracción fraseológica para la construcción de marcos semánticos en ámbitos de especialidad.</li>
+<br><img src="img/remote.png" style="vertical-align: middle; width: 20px;"> <span style="color:#4e5355">Trabajo en remoto</span>
+</ul>
+</div>
+<div class="product-aside">
+    <span class="aside-title"></span>
+    <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">2</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">años<br><span class="nocapitalizacion"></span></span>
+        </div>
+    </div>
+    <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">&copy;</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">Grupo <br>de Investigación<br></span>
+        </div>
+    </div>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">W</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text"><a href='https://ecolexicon.ugr.es/es/index.htm' target='_blank' border=0><span class="nocapitalizacion">ecolexicon.ugr.es</span></a></span>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="product-box" data-id="12898779">
+<div class="product-holder">
+<span class="counter">3</span>
+
+ <h2>Desarrollador sénior full stack (2012 - 2018)<br>UNIVERSIDAD ANTONIO DE NEBRIJA, Madrid. </h2>
+
+<ul class="bullets-list">
+    <li>Migración tecnológica de las aplicaciones de gestión y administración, gestionando en paralelo el mantenimiento del antiguo sistema, en un tiempo más corto de lo previsto.</li>
+    <li>Creación de nuevas herramientas de gestión universitaria y de aplicaciones educativas interactivas de principio a fin: UX, arquitectura de la información, wireframes, creación de prototipos, codificación y pruebas TDD y BDD, asegurando que el proyecto es implementado correctamente. </li>
+    <li>Partiendo de una nueva normativa legal, finalización con éxito de la expansión del servicio de gestión informática de títulos universitarios en conexión con los sistemas del Ministerio de Educación. </li>
+    <li>Creación de nuevos procesos de apoyo técnico a los usuarios, llegando a reducir el tiempo de atención a los mismos un promedio de 10 horas semanales por agente.</li>
+
+</ul>
+</div>
+<div class="product-aside">
+    <span class="aside-title"></span>
+    <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">6</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">años <br><span class="nocapitalizacion"></span></span>
+        </div>
+    </div>
+    <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">&copy;</div>
+        </div>
+        <div class="candidate-cell">
+           <span class="text">Universidad<br></span>
+        </div>
+    </div>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">W</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text"><a href='https://www.nebrija.com/' target='_blank' border=0><span class="nocapitalizacion">nebrija.com</span></a></span>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="product-box" data-id="12898778">
+<div class="product-holder">
+<span class="counter">4</span>
+
+ <h2>Programador y diseñador sénior  (2009 - 2011) <br>MOBILE DREAMS, Madrid.</h2>
+
+<ul class="bullets-list">
+    <li>Análisis y desarrollo de aplicaciones, además acciones de publicidad interactiva, en plataformas web y móvil. </li>
+    <li>Responsable de la codificación e integración de aplicaciones publicitarias, protagonizadas por personalidades del deporte, usando la plataforma de publicidad móvil de Apple iAd y en conexión directa con el equipo de iAd. </li>
+    <li>Parte del equipo de desarrollo que obtiene el León de Oro en la categoría “Cyber” del Cannes Lions 2010 por un catalogo interactivo para iPhone. </li>
+    <li>Creación de utilidades para la automatización de integraciones con las APIs de redes sociales, reduciendo así procesos y tiempos. </li>
+    <li>Coordinación de equipos de desarrollo externos con grandes resultados en motivación y productividad. </li>
+</ul>
+</div>
+<div class="product-aside">
+    <span class="aside-title"></span>
+    <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">2</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">años <br><span class="nocapitalizacion"></span></span>
+        </div>
+    </div>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">&copy;</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">Agencia  <br>de publicidad</span>
+        </div>
+    </div>
+
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">W</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text"><a href='http://mobiledreams.mobi' target='_blank' border=0><span class="nocapitalizacion11">mobiledreams.mobi</span></a></span>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="product-box" data-id="12898777">
+<div class="product-holder">
+<span class="counter">5</span>
+
+<h2>Desarrollador/programador audiovisual (2007 - 2009)<br>VIVO PRODUCCIONES, Madrid.  </h2>
+
+<ul class="bullets-list">
+<li>Diseño, desarrollo y programación de páginas web dedicadas a la reproducción de televisión IP a la carta y de sus sistemas de gestión de contenidos.</li>
+<li>Indexación, seguimiento y posicionamiento de contenidos a través de vídeo SEO.</li>
+<li>Desarrollo del Modelo Vista Controlador para plataformas IP de vídeo. Programación y gestión de herramientas tales como: valorar, compartir, chat, opiniones, inclusión de contenidos, etc.</li>
+<li>Diseños web ajustados al <i>responsiveness</i> necesario para vídeo.</li>
+</ul>
+</div>
+<div class="product-aside">
+    <span class="aside-title"></span>
+    <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">2</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">años <br><span class="nocapitalizacion"></span></span>
+        </div>
+    </div>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">&copy;</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">Producción de <br>televisión IP</span>
+        </div>
+    </div>
+
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">W</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text"><a href='http://vivocom.eu' target='_blank' border=0><span class="nocapitalizacion">vivocom.eu</span></a></span>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<div class="product-box" data-id="12898776">
+<div class="product-holder">
+<span class="counter">6</span>
+
+ <h2>Full Stack Developer (2005 - 2007)<br>JASMINE TECHNOLOGIES INC, Nueva York. </h2>
+
+<ul class="bullets-list">
+<li>Orientación técnica y estratégica a los miembros no técnicos del equipo necesarias para la exploración de nuevas ideas para productos.</li>
+<li>Experiencia demostrada en llevar aplicaciones críticas desde el diseño hasta la producción y en el apoyo técnico efectivo a los clientes en la adaptación del software a sus sistemas.</li>
+<li>Desarrollo dirigido por pruebas e integración continua. Metodologías ágiles.</li>
+<li>Excelentes habilidades de comunicación verbal y escrita, con la capacidad de traducir conceptos y procedimientos técnicos a personas con cargos no técnicos. </li>
+<li>Recopilación y redacción de especificaciones de software completas, tanto en inglés como en español, para nuevos productos.
+     </li>
+</ul>
+</div>
+<div class="product-aside">
+    <span class="aside-title"></span>
+    <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">2</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">años <br><span class="nocapitalizacion"></span></span>
+        </div>
+    </div>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">&copy;</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">Software     <br>educativo</span>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+<div class="product-box" data-id="12898775">
+<div class="product-holder">
+<span class="counter">7</span>
+
+ <h2>Diseñador gráfico. <br>Responsable de marketing digital (2004 - 2005)<br>SCHIBSTED, Madrid.</h2>
+
+<ul class="bullets-list">
+<li>Diseño de la publicidad gráfica publicada en revistas y periódicos de tirada diaria.</li>
+<li>Diseño de elementos gráficos para la web y para las campañas de e-mail marketing.</li>
+<li>Desarrollo de los conceptos creativos. Análisis y negociado de la adquisición de utilidades y archivo fotográfico.</li>
+<li>Responsable del marketing digital: posicionamiento web, optimización de la tasa de conversión y mejora del rendimiento. Uso de herramientas de análisis web como Google Analytics</li>
+</ul>
+</div>
+<div class="product-aside">
+    <span class="aside-title"></span>
+    <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">1</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">año <br><span class="nocapitalizacion"></span></span>
+        </div>
+    </div>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">&copy;</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">Publicidad <br>Clasificada</span>
+        </div>
+    </div>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">W</div>
+        </div>
+        <div class="candidate-cell">
+        <span class="text"><a href='http://www.vibbo.com/' target='_blank' border=0><span class="nocapitalizacion">vibbo.com</span></a></span>
+		</div>
+    </div>
+</div>
+</div>
+
+
+
+<div class="product-box" data-id="12898774">
+<div class="product-holder">
+<span class="counter">8</span>
+
+ <h2>Diseñador web/gráfico y programador (2002 - 2004) <br>GRUPO PLANETA,  Madrid.</h2>
+
+<ul class="bullets-list">
+<li>Creación del aspecto general de las páginas web de las publicaciones impresas en colaboración directa con la dirección de marketing. </li>
+<li>Planificación, diseño y codificación de boletines de noticias, encuestas y RSS feeds.</li>
+<li>Diseño de campañas de publicidad corporativa destinados a las publicaciones impresas.</li>
+<li>Desarrollo de la arquitectura, flujo y contenido de las páginas web mediante lenguajes de programación front end.</li>
+<li>Responsable de la gestión de la información contenida en las páginas web, coordinando un grupo de ayudantes en prácticas.</li>
+</ul>
+</div>
+<div class="product-aside">
+    <span class="aside-title"></span>
+    <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">2</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">años <br><span class="nocapitalizacion"></span></span>
+        </div>
+    </div>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">&copy;</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">Grupo<br>editorial</span>
+        </div>
+    </div>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">W</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text"><a href='http://www.planeta.es/es/revistas/prisma-publicaciones' target='_blank' border=0><span class="nocapitalizacion">planeta.es</span></a></span>
+        </div>
+    </div>
+            <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">W</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text"><a href='http://www.linneo.es/' target='_blank' border=0><span class="nocapitalizacion">linneo.es</span></a></span>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!--
+
+<div class="product-box" data-id="12898773">
+<div class="product-holder">
+<span class="counter">8</span>
+
+ <h2>Desarrollo web.  (2002) <br>MIRAME.NET,  Madrid.</h2>
+
+<ul class="bullets-list">
+<li>Diseño y maquetación de página web corporativa.</li>
+</ul>
+</div>
+<div class="product-aside">
+    <span class="aside-title"></span>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">&copy;</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">Sistemas<br>de seguridad</span>
+        </div>
+    </div>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">W</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text"><a href='http://www.mira-me.net' target='_blank' border=0><span class="nocapitalizacion">mirame.net</span></a></span>
+        </div>
+    </div>
+
+</div>
+</div>
+-->
+<div class="product-box" data-id="12898772">
+<div class="product-holder">
+<span class="counter">9</span>
+
+ <h2>Diseñador gráfico y webmaster (2000 - 2002) <br>MAXIMILES, Madrid.</h2>
+
+<ul class="bullets-list">
+<li>Programación, desarrollo y mantenimiento de los sitios web de la compañía.</li>
+<li>Realización de proyectos de diseño gráfico y web de alto impacto, entre otros: menús, boletines, logotipos, banners, postales, folletos y juegos con los que reconducir tráfico web usando JavaScript y Flash. </li>
+<li>Mantenimiento diario de las páginas web afiliadas, actualizando las campañas y contenidos gráficos del programa.</li>
+<li>Creación de diseños interactivos capaces de transmitir el mensaje corporativo.</li>
+<li>Responsable del diseño e implementación de elementos de la interfaz de usuario, gráficos, animación, etc. para el apoyo de necesidades visuales, de marca y estilísticas específicas.</li>
+</ul>
+</div>
+<div class="product-aside">
+    <span class="aside-title"></span>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">2</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">años <br><span class="nocapitalizacion"></span></span>
+        </div>
+    </div>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">&copy;</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">Online loyalty<br>program</span>
+        </div>
+    </div>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">W</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text"><a href='http://www.maximiles.com' target='_blank' border=0><span class="nocapitalizacion">maximiles.com</span></a></span>
+        </div>
+    </div>
+
+    <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">W</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text"><a href='http://www.dateos.com ' target='_blank' border=0><span class="nocapitalizacion">dateos.com</span></a></span>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<!--
+<div class="product-box" data-id="12898771">
+<div class="product-holder">
+<span class="counter">10</span>
+
+ <h2>Programador C, SQL, ODBC  (1999)  <br>ACCENTURE – CORITEL, Madrid.</h2>
+
+<ul class="bullets-list">
+<li>Programación y prueba de nuevos módulos para aplicaciones, así como modificaciones de programas ya existentes.</li>
+</ul>
+</div>
+<div class="product-aside">
+    <span class="aside-title"></span>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">1</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">año <br><span class="nocapitalizacion"></span></span>
+        </div>
+    </div>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">&copy;</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">Consultoría<br> tecnológica</span>
+        </div>
+    </div>
+
+</div>
+</div>
+
+<div class="product-box" data-id="12898770">
+<div class="product-holder">
+<span class="counter">11</span>
+
+ <h2>Import assistant (1995 -1996)   <br>EUROPA FOODS Ltd., Londres. </h2>
+
+<ul class="bullets-list">
+<li>Negociación de calidad, precio, servicio, tiempo de suministro, términos de pago y disposición de pedidos e inventario.</li>
+<li>Colaboración con los departamentos de ventas y finanzas para proporcionar pronósticos precisos de costos para los procesos de revisión de negocio.</li>
+</ul>
+</div>
+<div class="product-aside">
+    <span class="aside-title"></span>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">1</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">año <br><span class="nocapitalizacion"></span></span>
+        </div>
+    </div>
+        <div class="candidate-table">
+        <div class="candidate-cell">
+            <div class="circle-box ">&copy;</div>
+        </div>
+        <div class="candidate-cell">
+            <span class="text">Distribuidor mayorista</span>
+        </div>
+    </div>
+
+</div>
+</div>-->
+
+
+                                    </div><!-- final de items -->
+ <br>
+<div><h3>Educación</h3></div>
+<div class="product-box" data-id="12898706">
+<div class="product-holder">
+    <li>Coursera. <span style="color:#4e5355">Multiplatform Mobile App Development with React Native.</span></li><br>
+    <li>Coursera. <span style="color:#4e5355">Front-End Web Development with React</span></li><br>
+    <li>Coursera. <span style="color:#4e5355">Server-side Development with NodeJS, Express and MongoDB</span></li><br>
+<li>Coursera. <span style="color:#4e5355">Front-End Web UI Frameworks and Tools: Bootstrap 4</span></li><br>
+<li>Johns Hopkins University. <span style="color:#4e5355">Single Page Web Applications with AngularJS</span>. </li><br>
+<li>Fundación Universidad-Empresa, Universidad Nebrija, Madrid. <span style="color:#4e5355">Desarrollo Web con Symfony y Laravel</span>. </li> <br>
+<li>University of Maryland. <span style="color:#4e5355">Design and implementation of Android applications for mobile devices</span>.</li><br>
+<li>Confederation College colab. CEIM, CEOE. <span style="color:#4e5355">Programación básica de iPhone/iPad</span>.
+Lenguaje Objective C, Xcode e iOS 4, creación de interfaz gráfica, eventos, gestión de datos, preferencias del usuario, mapas y geolocalización, multitarea, publicación de aplicaciones.</li><br>
+<li>Centro de estudios Planetalia  colab. UNED, Madrid. <span style="color:#4e5355">Master en Java y desarrollo web</span>. Java, J2EE SQL JDBC, Servlets, JSP, J2EE, JNDI, JMS, EJB 2.0, PL/SQL, JTA/JTS, XML/XSLT, WAP 2.0/WML, MySQL, Oracle, IBM Websphere, IBM Visual Age, JBuilder, Jboss, Weblogic, Eclipse. </li><br>
+<li>Centro de estudios Europe, Madrid. <span style="color:#4e5355">Lenguaje COBOL</span>. </li><br>
+<li>Centro de estudios Europe, Madrid. <span style="color:#4e5355">Certificado en diseño y programación web.</span> </li> <br>
+
+<li>Universidad de León, León. <span style="color:#4e5355">Técnico en Empresas y Actividades Turísticas</span> <!--(le corresponde el nivel 2 (Grado) del Marco Español de Cualificaciones para la Educación Superior (MECES) y el nivel 6, del Marco Europeo de Cualificaciones (EQF)). -->(equivalente a Grado Universitario). </li>
+
+
+</div>
+</div>
+                                </div>
+
+
+
+
+                            </div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </body></html>
