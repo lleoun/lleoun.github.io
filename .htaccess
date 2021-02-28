@@ -1,1 +1,2 @@
 Redirect /index.html /espanol.html
+DirectoryIndex espanol.html index.html
