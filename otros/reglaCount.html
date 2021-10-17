@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Regla count</title>
+</head>
+
+<body>
+  <h2>Regla Count: <br>¿Cuándo será tu próxima regla?</h2>
+
+  <div class="main">
+    <form id='formulario'>
+      <div class="fechaStartClass">
+        <label for="fechaStartLabel">Fecha de tu última regla:</label>
+        <input id="fechaStart" type="date" name="fechaStart">
+      </div>
+
+      <div class="diasSumadosClass">
+        <label for="diasSumadosLabel">Sumar estos días:</label>
+        <select name="diasSumados" id="diasSumados">
+          <option value="25">Ara 25</option>
+          <option value="26">Bea 26</option>
+        </select>
+      </div>
+
+      <div>
+        <button class="btn">Click</button>
+      </div>
+    </form>
+
+    <p>
+      <div class="fechaProximaClass">
+        <label for="fechaProximaLabel">Próxima regla:</label>
+        <div id="fechaProxima"></div>
+      </div>
+    </p>
+  </div>
+
+
+
+  <style>
+    body {
+      text-align: center;
+      background: #BADA55;
+      color: purple;
+      font-family: 'helvetica neue', sans-serif;
+      font-weight: 100;
+      font-size: 30px;
+    }
+
+    label {
+      font-size: 23px;
+    }
+
+    input {
+      width: 130px;
+    }
+
+    #fechaProxima {
+      font-weight: bold;
+      font-size: 20px;
+    }
+  </style>
+
+  <script>
+
+    formulario.addEventListener("submit", function (event) {
+      // stop form submission
+      event.preventDefault();
+
+      const laFechaStart = document.getElementById("fechaStart").value;
+      const losDiasSumados = document.getElementById("diasSumados").value;
+
+      //console.info(laFechaStart);
+      var fecha = new Date(laFechaStart);
+
+      var dias = parseInt(losDiasSumados);
+
+      fecha.setDate(fecha.getDate() + dias - 1);
+
+      document.getElementById("fechaProxima").innerHTML = fecha.toLocaleDateString("es-ES");
+
+    });
+
+  </script>
+
+</body>
+
+</html>
