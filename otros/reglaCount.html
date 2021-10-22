@@ -4,7 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Regla count</title>
-  <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+<script src="https://apis.google.com/js/api.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="bell.png">
 </head>
 
 <body>
@@ -79,10 +82,55 @@
       var dias = parseInt(losDiasSumados);
 
       fecha.setDate(fecha.getDate() + dias - 1);
-
-      document.getElementById("fechaProxima").innerHTML = fecha.toLocaleDateString("es-ES");
+      
+      console.log(fecha);
+      console.log(fecha.toISOString().slice(0, 10));
+      console.log(fecha.toLocaleDateString("es-ES"));
+      document.getElementById("fechaProxima").innerHTML = 
+      '<a onclick="window.open(getGCalendarUrl(\''+fecha.toISOString().slice(0, 10)+'\'))">'+fecha.toLocaleDateString("es-ES")+'</a>';
 
     });
+
+
+    //añadir a Google Calendar
+    function getGCalendarUrl(fecha) {
+
+        const titulo = encodeURIComponent(event[0]);
+        const descripcion = encodeURIComponent(event[1]);
+        const localizacion = encodeURIComponent(event[2]);
+        /*const start = new Date(event['fecha_inicio'] + ' ' + event['hora_inicio'] + ' ' + date_default_timezone_get());
+        const end = new Date(event['fecha_fin'] + ' ' + event['hora_fin'] + ' ' + date_default_timezone_get());*/
+        const start = new Date(fecha+ ' ' + event[4]);//new Date(event['fecha_inicio'] + ' ' + event['hora_inicio'] + ' ' + date_default_timezone_get());
+        const end = new Date(fecha+ ' ' + event[6]);//new Date(event['fecha_fin'] + ' ' + event['hora_fin'] + ' ' + date_default_timezone_get());
+        const dates = start.toISOString().slice(0, 19).replace(/-/g, "").replace(/:/g, "")  + "/" + end.toISOString().slice(0, 19).replace(/-/g, "").replace(/:/g, "");
+        //$dates = urlencode($start->format("Ymd\THis")) . "/" . urlencode($end->format("Ymd\THis"));
+         // 20140410T173000/20140412T190000
+       
+        const name = event[7];
+        const url = event[8];
+
+      
+        const gCalUrl = "http://www.google.com/calendar/event?action=TEMPLATE&text=" + titulo + "&dates=" + dates + "&details=" + descripcion + "&location=" + localizacion +"&trp=false&sprop=" + url + "&sprop=name:" + name + "";
+       
+        return (gCalUrl);
+      
+
+    }
+    // array asociativo con los parametros mecesarios.
+    var event = [
+        'Regla 25', //titulo
+        'Los rusos te atacan', //descripcion
+        'El evento se celebra en todos los sitios a los que vayas',//localizacion 
+        '2014-04-10', // Fecha de inicio de evento en formato AAAA-MM-DD
+        '17:30', // Hora Inicio del evento
+        '2014-04-12', // Fecha de fin de evento en formato AAAA-MM-DD
+        '19:00', // Hora final del evento
+        'TuBlog', // Nombre del sitio
+        'www.tuUrl.es', // Url de la página,
+        '5'
+    ];
+ 
+
 
   </script>
 
