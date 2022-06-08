@@ -1,0 +1,28 @@
+
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("images/background-photo.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center 35px;
+  background-repeat: no-repeat;
+  background-size: 70%;
+  background-color:#F5DDC1;
+}
+
+/* For mobile devices */
+@media only screen and (max-width: 767px) {
+  body {
+    /* The file size of this background image is 93% smaller
+     * to improve page load speed on mobile internet connections */
+    background-image: url(images/background-photo-mobile-devices_new.jpg);
+  }
+	}
