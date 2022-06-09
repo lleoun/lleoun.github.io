@@ -308,8 +308,8 @@ fieldset div.rating {
 }
 
 .wufoo input.btTxt {
-    background-color: #663300!important;
-    border: none;
+    background-color: #cc6b09 !important;
+    border: 3px solid #f5a977 !important;
     border-radius: 5px;
     padding: 10px;
     color: white;
