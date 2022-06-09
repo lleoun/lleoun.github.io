@@ -1,1 +1,337 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:400,700);html{background-color:#f8fafb}span.symbol{margin-top:5px}.wufoo .info h2{font-family:"Lato", Arial, sans-serif;font-size:200%}.wufoo label.desc,.wufoo legend.desc{color:#3a3a3a;font-family:"Lato", Arial, sans-serif;font-size:130%}.wufoo input.text,.wufoo textarea.textarea,.wufoo input.file{background-image:none;border:1px solid #c3c3c3;line-height:200%;font-size:16px;border-radius:5px}form li.time input.text,form li.phone input.text,form li.date input.text{line-height:150%;padding:5px}.wufoo .info div{font-size:120%;font-family:"Lato", Arial, sans-serif}.wufoo .datepicker{float:left;width:20px;height:20px;margin:8px 8px 8px;cursor:pointer !important}.wufoo li.error .desc{font-size:130%;font-family:"Lato", Arial, sans-serif}.wufoo li.error p.error{font-size:100%;font-family:"Lato", Arial, sans-serif}.wufoo li div span label{font-size:100%}.wufoo li div,.wufoo li span,.wufoo li div label,.wufoo li span label{font-size:85%;font-family:"Lato", Arial, sans-serif}.wufoo select.select{border-radius:5px;height:36px;border-color:#c3c3c3}.wufoo li span{display:inline-block;line-height:200% !important}.wufoo .likert caption,.likert tbody th label,.likert thead td{font-size:130%;font-family:"Lato", Arial, sans-serif;font-weight:normal}.wufoo li.date span,.wufoo li.time span,.wufoo li.phone span{width:auto}.wufoo li span.symbol,.wufoo span.cents{font-size:14px}.wufoo span.star{font-size:20px;line-height:1em;width:.9em;height:1em;padding-right:.1em;color:#444444;text-shadow:0 0 1px #444}.rating>span:hover,.rating .clicked:hover,.rating:hover span{color:#ffe487;text-shadow:0 0 1px #ff0000;cursor:pointer}.rating .clicked,.wufoo span.clicked{color:#FFD954}.wufoo input.checkbox{-webkit-appearance:none;-moz-appearance:none;display:inline-block;background-color:white;border:1px solid #c3c3c3;border-radius:3px;width:20px;height:20px;margin-top:5px;position:absolute}.wufoo input.checkbox:active,input.checkbox:checked:active{box-shadow:0 1px 2px rgba(0,0,0,0.05),inset 0px 1px 3px rgba(0,0,0,0.1)}.wufoo input.checkbox:checked{background-color:#f2f2f2;border:1px solid #c3c3c3;box-shadow:0 1px 2px rgba(0,0,0,0.05),inset 0px -15px 10px -12px rgba(0,0,0,0.05),inset 15px 10px -12px rgba(255,255,255,0.1);color:#99a1a7}.wufoo input.checkbox:checked:after{content:'\2714';font-size:14px;position:relative;top:0px;left:3px;color:#99a1a7}.wufoo input.radio{-webkit-appearance:none;-moz-appearance:none;display:inline-block;background-color:white;border:1px solid #c3c3c3;border-radius:50px;padding:9px;width:20px;height:20px;margin-top:5px;position:absolute}.wufoo input.radio:checked:after{content:' ';background-color:#99a1a7;border-radius:50px;width:12px;height:12px;border:1px solid #c3c3c3;text-shadow:0px;font-size:20px;position:absolute;top:2px;left:2px}.wufoo input.radio:checked{background-color:#f2f2f2;color:#99a1a7;border:1px solid #adb8c0}.wufoo .likert input{-webkit-appearance:none;-moz-appearance:none;display:inline-block;background-color:white;border:1px solid #c3c3c3;border-radius:50px;padding:9px;width:20px;height:20px;margin-top:3px;position:relative}.wufoo .likert input:checked:after{content:' ';background-color:#99a1a7;border-radius:50px;width:12px;height:12px;border:1px solid #c3c3c3;text-shadow:0px;font-size:20px;position:absolute;top:2px;left:2px}.wufoo .likert input:checked{background-color:#f2f2f2;color:#99a1a7;border:1px solid #adb8c0}.wufoo .section h3{font-family:"Lato", Arial, sans-serif;font-size:140%;font-style:bold}.wufoo .section div{font-family:"Lato", Arial, sans-serif;font-size:120%}.wufoo .pgStyle1 b,.pgStyle2 b{font-family:"Lato", Arial, sans-serif;font-size:130%}.wufoo .pgStyle1 var,.pgStyle2 var{font-family:"Lato", Arial, sans-serif;font-size:130%;width:35px;height:23px;padding-top:9px;margin-top:-5px;border-radius:50%}.wufoo .pgStyle1 .done var,.pgStyle2 .done var{background-color:#f2f2f2}.wufoo label.choice{display:inline-block;margin-left:10px;padding-left:20px;margin-top:-2px}.wufoo input.currency,.wufoo span.cents input{line-height:150%}.wufoo l1 span{line-height:200% !important}form li.time span input{width:24px}input.medium{width:100%}select.medium{width:100%}.wufoo input.text.fn,.wufoo input.text.ln{width:115px}#logo a{background-color:#36c9c9}fieldset div.rating{width:150px}.rating span{margin-right:10px}.wufoo input.btTxt{background-color:#36c9c9;border:none;border-radius:5px;padding:10px;color:white;cursor:pointer;margin-top:25px}.wufoo input[type="file"]::-webkit-file-upload-button{background-color:#36c9c9;border:none;border-radius:5px;padding:8px 15px 8px;color:white;cursor:pointer;margin-right:5px}.wufoo li.focused{border-radius:5px;background:#E5F0FF}.likert tbody tr:hover td,.likert tbody tr:hover th,.likert tbody tr:hover label{background:#E5F0FF}
+@import url(https://fonts.googleapis.com/css?family=Lato:400,700);
+
+html {
+    background-color: #f8fafb
+}
+
+span.symbol {
+    margin-top: 5px
+}
+
+.wufoo .info h2 {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 200%
+}
+
+.wufoo label.desc,
+.wufoo legend.desc {
+    color: #3a3a3a;
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 130%
+}
+
+.wufoo input.text,
+.wufoo textarea.textarea,
+.wufoo input.file {
+    background-image: none;
+    border: 1px solid #c3c3c3;
+    line-height: 200%;
+    font-size: 16px;
+    border-radius: 5px
+}
+
+form li.time input.text,
+form li.phone input.text,
+form li.date input.text {
+    line-height: 150%;
+    padding: 5px
+}
+
+.wufoo .info div {
+    font-size: 120% !important;
+    font-family: "Lato", Arial, sans-serif
+}
+
+.wufoo .datepicker {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin: 8px 8px 8px;
+    cursor: pointer !important
+}
+
+.wufoo li.error .desc {
+    font-size: 130%;
+    font-family: "Lato", Arial, sans-serif
+}
+
+.wufoo li.error p.error {
+    font-size: 100%;
+    font-family: "Lato", Arial, sans-serif
+}
+
+.wufoo li div span label {
+    font-size: 100%
+}
+
+.wufoo li div,
+.wufoo li span,
+.wufoo li div label,
+.wufoo li span label {
+    font-size: 85%;
+    font-family: "Lato", Arial, sans-serif
+}
+
+.wufoo select.select {
+    border-radius: 5px;
+    height: 36px;
+    border-color: #c3c3c3
+}
+
+.wufoo li span {
+    display: inline-block;
+    line-height: 200% !important
+}
+
+.wufoo .likert caption,
+.likert tbody th label,
+.likert thead td {
+    font-size: 130%;
+    font-family: "Lato", Arial, sans-serif;
+    font-weight: normal
+}
+
+.wufoo li.date span,
+.wufoo li.time span,
+.wufoo li.phone span {
+    width: auto
+}
+
+.wufoo li span.symbol,
+.wufoo span.cents {
+    font-size: 14px
+}
+
+.wufoo span.star {
+    font-size: 20px;
+    line-height: 1em;
+    width: .9em;
+    height: 1em;
+    padding-right: .1em;
+    color: #444444;
+    text-shadow: 0 0 1px #444
+}
+
+.rating>span:hover,
+.rating .clicked:hover,
+.rating:hover span {
+    color: #ffe487;
+    text-shadow: 0 0 1px #ff0000;
+    cursor: pointer
+}
+
+.rating .clicked,
+.wufoo span.clicked {
+    color: #FFD954
+}
+
+.wufoo input.checkbox {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #c3c3c3;
+    border-radius: 3px;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    position: absolute
+}
+
+.wufoo input.checkbox:active,
+input.checkbox:checked:active {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px 1px 3px rgba(0, 0, 0, 0.1)
+}
+
+.wufoo input.checkbox:checked {
+    background-color: #f2f2f2;
+    border: 1px solid #c3c3c3;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05), inset 15px 10px -12px rgba(255, 255, 255, 0.1);
+    color: #99a1a7
+}
+
+.wufoo input.checkbox:checked:after {
+    content: '\2714';
+    font-size: 14px;
+    position: relative;
+    top: 0px;
+    left: 3px;
+    color: #99a1a7
+}
+
+.wufoo input.radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #c3c3c3;
+    border-radius: 50px;
+    padding: 9px;
+    width: 20px;
+    height: 20px;
+    margin-top: 5px;
+    position: absolute
+}
+
+.wufoo input.radio:checked:after {
+    content: ' ';
+    background-color: #99a1a7;
+    border-radius: 50px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #c3c3c3;
+    text-shadow: 0px;
+    font-size: 20px;
+    position: absolute;
+    top: 2px;
+    left: 2px
+}
+
+.wufoo input.radio:checked {
+    background-color: #f2f2f2;
+    color: #99a1a7;
+    border: 1px solid #adb8c0
+}
+
+.wufoo .likert input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: inline-block;
+    background-color: white;
+    border: 1px solid #c3c3c3;
+    border-radius: 50px;
+    padding: 9px;
+    width: 20px;
+    height: 20px;
+    margin-top: 3px;
+    position: relative
+}
+
+.wufoo .likert input:checked:after {
+    content: ' ';
+    background-color: #99a1a7;
+    border-radius: 50px;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #c3c3c3;
+    text-shadow: 0px;
+    font-size: 20px;
+    position: absolute;
+    top: 2px;
+    left: 2px
+}
+
+.wufoo .likert input:checked {
+    background-color: #f2f2f2;
+    color: #99a1a7;
+    border: 1px solid #adb8c0
+}
+
+.wufoo .section h3 {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 140%;
+    font-style: bold
+}
+
+.wufoo .section div {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 120%
+}
+
+.wufoo .pgStyle1 b,
+.pgStyle2 b {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 130%
+}
+
+.wufoo .pgStyle1 var,
+.pgStyle2 var {
+    font-family: "Lato", Arial, sans-serif;
+    font-size: 130%;
+    width: 35px;
+    height: 26px;
+    padding-top: 9px;
+    margin-top: -5px;
+    border-radius: 50%
+}
+
+.wufoo .pgStyle1 .done var,
+.pgStyle2 .done var {
+    background-color: #f2f2f2
+}
+
+.wufoo label.choice {
+    display: inline-block;
+    margin-left: 10px;
+    padding-left: 20px;
+    margin-top: -2px
+}
+
+.wufoo input.currency,
+.wufoo span.cents input {
+    line-height: 150%
+}
+
+.wufoo l1 span {
+    line-height: 200% !important
+}
+
+form li.time span input {
+    width: 24px
+}
+
+input.medium {
+    width: 100%
+}
+
+select.medium {
+    width: 100%
+}
+
+.wufoo input.text.fn,
+.wufoo input.text.ln {
+    width: 115px
+}
+
+#logo a {
+    background-color: #36c9c9
+}
+
+fieldset div.rating {
+    width: 150px
+}
+
+.rating span {
+    margin-right: 10px
+}
+
+.wufoo input.btTxt {
+    background-color: #36c9c9;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    margin-top: 25px
+}
+
+.wufoo input[type="file"]::-webkit-file-upload-button {
+    background-color: #36c9c9;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 15px 8px;
+    color: white;
+    cursor: pointer;
+    margin-right: 5px
+}
+
+.wufoo li.focused {
+    border-radius: 5px;
+    background: #E5F0FF
+}
+
+.likert tbody tr:hover td,
+.likert tbody tr:hover th,
+.likert tbody tr:hover label {
+    background: #E5F0FF
+}
