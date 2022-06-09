@@ -11,13 +11,31 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
-    <link rel="stylesheet" href="gallery-grid.css">
-
-
+   
+  <script type="text/javascript">
+    //https://stackoverflow.com/questions/4839346/changing-css-file-according-to-resolution-with-javascript
+      if (window.innerWidth > 450) { // pcs
+        document.write("<link href='casele_pcs.css' rel='stylesheet' type='text/css'>")
+      }else { //movil
+        document.write("<link href='casele_movil.css' rel='stylesheet' type='text/css'>")
+      }
+  </script>
+ <link rel="stylesheet" href="gallery-grid.css">
 </head>
 <body>
 
 <div class="container gallery-container">
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <ul class="nav navbar-nav">
+      <li><a href="index.html"><span class="glyphicon glyphicon-home"></span></a></li>
+      <li><a href="https://goo.gl/maps/qVf6gh5c5XSixsgh6">Mapa</a></li>
+      <li class="active"><a href="fotos.html">Fotos</a></li>
+      <li><a href="info.html">+ info</a></li>
+      <li><a href="https://casele.wufoo.com/forms/zhc9gbe03ps99q/">¿Vienes?</a></li>
+    </ul>
+  </div>
+</nav>
 
     <h1>Galería de Fotos</h1>
 
