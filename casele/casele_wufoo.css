@@ -1,9 +1,11 @@
 @import url(https://fonts.googleapis.com/css?family=Lato:400,700);
 
 html {
-    background-color: #f8fafb
+    background-color: #F5DDC1
 }
-
+body{
+    background-color:#F5DDC1;
+}
 span.symbol {
     margin-top: 5px
 }
