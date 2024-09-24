@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de Precio por Gramo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 90vh;
+        }
+        .container {
+            background-color: white;
+            max-width: 400px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        label {
+            text-align: left;
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #555;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #resultado {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-top: 20px;
+            background-color: #e7f5e8;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .historial {
+            margin-top: 20px;
+            text-align: left;
+        }
+        .historial h3 {
+            color: #333;
+        }
+        .historial-item {
+            background-color: #eaf2f8;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Calculadora de Precio por Gramo y por 100 Gramos</h2>
+
+        <label for="nombre">Nombre del Ítem:</label>
+        <input type="text" id="nombre" placeholder="Introduce el nombre del ítem">
+
+        <label for="gramos">Gramos:</label>
+        <input type="number" id="gramos" step="0.01" placeholder="Introduce los gramos">
+
+        <label for="precio">Precio (€):</label>
+        <input type="number" id="precio" step="0.01" placeholder="Introduce el precio en euros">
+
+        <button onclick="calcular()">Calcular</button>
+
+        <div id="resultado"></div>
+
+        <div class="historial">
+            <h3>Historial de los últimos 3 ítems:</h3>
+            <div id="historial-items"></div>
+        </div>
+    </div>
+
+    <script>
+        var historial = [];
+
+        function calcular() {
+            var nombre = document.getElementById('nombre').value;
+            var gramos = parseFloat(document.getElementById('gramos').value);
+            var precio = parseFloat(document.getElementById('precio').value);
+
+            if (!nombre || isNaN(gramos) || gramos <= 0 || isNaN(precio) || precio <= 0) {
+                document.getElementById('resultado').innerText = "Por favor, introduce valores válidos.";
+            } else {
+                var precioPorGramo = (precio / gramos).toFixed(4);
+                var precioPor100Gramos = (precioPorGramo * 100).toFixed(2);
+
+                document.getElementById('resultado').innerHTML = 
+                    "Ítem: " + nombre + "<br>" +
+                    "Precio por gramo: " + precioPorGramo + " €<br>" +
+                    "Precio por 100 gramos: " + precioPor100Gramos + " €";
+
+                // Añadir el ítem al historial
+                historial.unshift({
+                    nombre: nombre,
+                    precioPorGramo: precioPorGramo,
+                    precioPor100Gramos: precioPor100Gramos
+                });
+
+                // Mantener solo los 3 últimos ítems
+                if (historial.length > 3) {
+                    historial.pop();
+                }
+
+                // Actualizar la visualización del historial
+                actualizarHistorial();
+            }
+        }
+
+        function actualizarHistorial() {
+            var historialContainer = document.getElementById('historial-items');
+            historialContainer.innerHTML = '';
+
+            historial.forEach(function(item) {
+                var div = document.createElement('div');
+                div.className = 'historial-item';
+                div.innerHTML = 
+                    "<strong>Ítem:</strong> " + item.nombre + "<br>" +
+                    "<strong>Precio por gramo:</strong> " + item.precioPorGramo + " €<br>" +
+                    "<strong>Precio por 100 gramos:</strong> " + item.precioPor100Gramos + " €";
+                historialContainer.appendChild(div);
+            });
+        }
+    </script>
+</body>
+</html>
