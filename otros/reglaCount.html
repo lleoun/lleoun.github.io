@@ -69,27 +69,24 @@
 
   <script>
 
-    formulario.addEventListener("submit", function (event) {
-      // stop form submission
-      event.preventDefault();
+  formulario.addEventListener("submit", function (event) {
+    event.preventDefault();
 
-      const laFechaStart = document.getElementById("fechaStart").value;
-      const losDiasSumados = document.getElementById("diasSumados").value;
+    const laFechaStart = document.getElementById("fechaStart").value;
+    const losDiasSumados = document.getElementById("diasSumados").value;
 
-      //console.info(laFechaStart);
-      var fecha = new Date(laFechaStart);
+    var fecha = new Date(laFechaStart + "T00:00:00"); // Asegura la conversión sin desfases
+    var dias = parseInt(losDiasSumados);
 
-      var dias = parseInt(losDiasSumados);
+    fecha.setDate(fecha.getDate() + dias - 1);
 
-      fecha.setDate(fecha.getDate() + dias - 1);
-      
-      console.log(fecha);
-      console.log(fecha.toISOString().slice(0, 10));
-      console.log(fecha.toLocaleDateString("es-ES"));
-      document.getElementById("fechaProxima").innerHTML = 
+    console.log(fecha);
+    console.log(fecha.toISOString().slice(0, 10));
+    console.log(fecha.toLocaleDateString("es-ES"));
+
+    document.getElementById("fechaProxima").innerHTML =
       '<a onclick="window.open(getGCalendarUrl(\''+fecha.toISOString().slice(0, 10)+'\'))">'+fecha.toLocaleDateString("es-ES")+'</a>';
-
-    });
+  });
 
 
     //añadir a Google Calendar
@@ -105,22 +102,22 @@
         const dates = start.toISOString().slice(0, 19).replace(/-/g, "").replace(/:/g, "")  + "/" + end.toISOString().slice(0, 19).replace(/-/g, "").replace(/:/g, "");
         //$dates = urlencode($start->format("Ymd\THis")) . "/" . urlencode($end->format("Ymd\THis"));
          // 20140410T173000/20140412T190000
-       
+
         const name = event[7];
         const url = event[8];
 
-      
+
         const gCalUrl = "http://www.google.com/calendar/event?action=TEMPLATE&text=" + titulo + "&dates=" + dates + "&details=" + descripcion + "&location=" + localizacion +"&trp=false&sprop=" + url + "&sprop=name:" + name + "";
-       
+
         return (gCalUrl);
-      
+
 
     }
     // array asociativo con los parametros mecesarios.
     var event = [
         'Regla 25', //titulo
         'Los rusos te atacan', //descripcion
-        'El evento se celebra en todos los sitios a los que vayas',//localizacion 
+        'El evento se celebra en todos los sitios a los que vayas',//localizacion
         '2014-04-10', // Fecha de inicio de evento en formato AAAA-MM-DD
         '17:30', // Hora Inicio del evento
         '2014-04-12', // Fecha de fin de evento en formato AAAA-MM-DD
@@ -129,7 +126,7 @@
         'www.tuUrl.es', // Url de la página,
         '5'
     ];
- 
+
 
 
   </script>
