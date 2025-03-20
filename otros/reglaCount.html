@@ -75,17 +75,22 @@
     const laFechaStart = document.getElementById("fechaStart").value;
     const losDiasSumados = document.getElementById("diasSumados").value;
 
-    var fecha = new Date(laFechaStart + "T00:00:00"); // Asegura la conversión sin desfases
+    var fecha = new Date(laFechaStart + "T00:00:00"); // Evita desfases de zona horaria
     var dias = parseInt(losDiasSumados);
 
     fecha.setDate(fecha.getDate() + dias - 1);
 
+    // Formatear la fecha manualmente en YYYY-MM-DD
+    const formattedDate = fecha.getFullYear() + '-' +
+                          String(fecha.getMonth() + 1).padStart(2, '0') + '-' +
+                          String(fecha.getDate()).padStart(2, '0');
+
     console.log(fecha);
-    console.log(fecha.toISOString().slice(0, 10));
+    console.log(formattedDate); // Fecha correcta sin problemas de zona horaria
     console.log(fecha.toLocaleDateString("es-ES"));
 
     document.getElementById("fechaProxima").innerHTML =
-      '<a onclick="window.open(getGCalendarUrl(\''+fecha.toISOString().slice(0, 10)+'\'))">'+fecha.toLocaleDateString("es-ES")+'</a>';
+      '<a onclick="window.open(getGCalendarUrl(\''+formattedDate+'\'))">'+fecha.toLocaleDateString("es-ES")+'</a>';
   });
 
 
