@@ -54,7 +54,9 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; border-r
 .primary-nav a:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 0.3em; text-decoration-thickness: 1px; }
 .language-switch { display: flex; gap: 0.75rem; font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em; }
 .language-current { color: var(--ink); }
-.language-pending { color: var(--muted); font-weight: 400; }
+.language-link { color: var(--muted); font-weight: 400; text-decoration: none; min-height: 2.75rem; display: inline-flex; align-items: center; }
+.language-link:hover { color: var(--ink); text-decoration: underline; text-underline-offset: 0.3em; }
+.language-switch { align-items: center; }
 
 /* Hero */
 .hero { padding-block: clamp(3.5rem, 10vw, 8rem) clamp(3.5rem, 8vw, 6.5rem); }
@@ -105,9 +107,9 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; border-r
 .product-list > div { padding-block: 1rem; border-bottom: 1px solid var(--line); }
 .product-list dt { font-weight: 600; }
 .product-list dd { color: var(--muted); font-size: 0.975rem; }
-.localfy { margin-top: clamp(2.5rem, 5vw, 3.5rem); padding-top: 1.5rem; border-top: 1px solid var(--line-strong); }
-.localfy h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.7rem, 3vw, 2.2rem); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 1rem; }
-.localfy p + p { margin-top: 1rem; }
+.assistant { margin-top: clamp(2.5rem, 5vw, 3.5rem); padding-top: 1.5rem; border-top: 1px solid var(--line-strong); }
+.assistant h3 { font-family: var(--serif); font-weight: 400; font-size: clamp(1.7rem, 3vw, 2.2rem); line-height: 1.2; letter-spacing: -0.02em; margin-bottom: 1rem; }
+.assistant p + p { margin-top: 1rem; }
 
 /* Capacidades */
 .capabilities { display: grid; gap: 0; border-top: 1px solid var(--line-strong); }
@@ -131,8 +133,13 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; border-r
 /* Contacto y pie */
 .site-footer { background: var(--deep); color: var(--on-deep); }
 .contact { padding-block: var(--section-space) clamp(2.5rem, 6vw, 4.5rem); }
-.email-link { font-family: var(--serif); font-size: clamp(1.05rem, 4.3vw, 2rem); line-height: 1.3; overflow-wrap: anywhere; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.25em; text-decoration-color: var(--on-deep-muted); }
+.email-link { display: inline-block; padding-block: 0.4rem; font-family: var(--serif); font-size: clamp(1rem, 3.8vw, 1.5rem); line-height: 1.3; overflow-wrap: anywhere; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 0.25em; text-decoration-color: var(--on-deep-muted); }
 .email-link:hover { text-decoration-color: currentColor; }
+.email-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 0.25rem 1rem; margin-top: 0.5rem; }
+.copy-email { min-height: 2.75rem; padding: 0 1rem; border: 1px solid var(--on-deep-muted); border-radius: 2rem; background: transparent; color: var(--on-deep); font: inherit; font-size: 0.9rem; cursor: pointer; }
+.copy-email:hover { background: rgba(234, 241, 236, 0.1); }
+.copy-email:focus-visible { outline: 2px solid var(--on-deep); outline-offset: 3px; }
+.copy-status { color: var(--on-deep-muted); font-size: 0.9rem; }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0 1.5rem; padding-block: 0.75rem; border-top: 1px solid rgba(234, 241, 236, 0.2); color: var(--on-deep-muted); font-size: 0.875rem; }
 .footer-bottom a { display: inline-flex; align-items: center; min-height: 2.75rem; text-decoration: none; }
 .footer-bottom a:hover { color: var(--on-deep); text-decoration: underline; text-underline-offset: 0.3em; }

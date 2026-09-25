@@ -3,11 +3,32 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="robots" content="noindex, nofollow, noarchive, nosnippet">
-    <meta name="googlebot" content="noindex, nofollow, noarchive, nosnippet">
+    <!-- PUBLICACIÓN: borrar las dos líneas siguientes (robots y googlebot) al publicar -->
+    <meta name="robots" content="noindex, nofollow">
+    <meta name="googlebot" content="noindex, nofollow">
+    <title>Araceli Domínguez — Liderazgo técnico, desarrollo Full Stack e IA aplicada</title>
+    <meta name="description" content="Perfil profesional de Araceli Domínguez: más de 20 años construyendo productos digitales, con foco en liderazgo técnico, desarrollo Full Stack e IA aplicada.">
     <meta name="theme-color" content="#f5f3ec">
-    <meta name="description" content="Prototipo privado de la nueva presentación profesional de Araceli Domínguez.">
-    <title>Araceli Domínguez — Prototipo de presentación profesional</title>
+    <link rel="canonical" href="https://www.aracelidominguez.com/">
+    <link rel="alternate" hreflang="es" href="https://www.aracelidominguez.com/">
+    <link rel="alternate" hreflang="en" href="https://www.aracelidominguez.com/en/">
+    <link rel="alternate" hreflang="x-default" href="https://www.aracelidominguez.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Araceli Domínguez">
+    <meta property="og:title" content="Araceli Domínguez">
+    <meta property="og:description" content="Liderazgo técnico · Desarrollo Full Stack · IA aplicada y producto digital">
+    <meta property="og:url" content="https://www.aracelidominguez.com/">
+    <meta property="og:locale" content="es_ES">
+    <meta property="og:locale:alternate" content="en_GB">
+    <meta property="og:image" content="https://www.aracelidominguez.com/og-es.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Araceli Domínguez. Liderazgo técnico, desarrollo Full Stack, IA aplicada y producto digital.">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Person","name":"Araceli Domínguez","url":"https://www.aracelidominguez.com/","knowsAbout":["Liderazgo técnico","Desarrollo Full Stack","IA aplicada","Producto digital"]}
+    </script>
     <link rel="preload" href="fonts/source-serif-4-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="styles.css">
   </head>
@@ -25,7 +46,7 @@
         </nav>
         <div class="language-switch" aria-label="Idiomas disponibles" role="group">
           <span class="language-current" lang="es" aria-current="true">ES</span>
-          <span class="language-pending" lang="en" title="Versión inglesa pendiente de adaptación">EN</span>
+          <a class="language-link" href="en/" hreflang="en" lang="en">EN<span class="sr-only"> — English version</span></a>
         </div>
       </div>
     </header>
@@ -81,9 +102,9 @@
             <p>Lidero el área técnica y participo en la evolución de estos productos de principio a fin: arquitectura, desarrollo, priorización, validación, seguridad y puesta en producción.</p>
             <p>Parte del trabajo reciente es la evolución del panel de administración con Laravel y Filament: gestión de proyectos y permisos, contenidos multilingües, métricas y exportaciones.</p>
 
-            <section class="localfy" aria-labelledby="localfy-title">
-              <h3 id="localfy-title">Localfy</h3>
-              <p>Localfy es un asistente turístico con IA. Un visitante le pregunta en lenguaje natural por patrimonio, gastronomía, rutas, eventos o servicios, y las respuestas se apoyan en información proporcionada y validada por el destino, no en búsquedas libres en Internet.</p>
+            <section class="assistant" aria-labelledby="asistente-title">
+              <h3 id="asistente-title">Un asistente turístico con IA</h3>
+              <p>También desarrollamos un asistente turístico con IA. Un visitante le pregunta en lenguaje natural por patrimonio, gastronomía, rutas, eventos o servicios, y las respuestas se apoyan en información proporcionada y validada por el destino, no en búsquedas libres en Internet.</p>
               <p>Participo en su definición, arquitectura y desarrollo. En la parte de IA trabajo en la recuperación de información, la comparación de modelos y la evaluación de respuestas, y analizo qué preguntan los visitantes, la calidad, el coste y la latencia para orientar las mejoras.</p>
             </section>
           </div>
@@ -144,6 +165,7 @@
         </header>
         <div class="section-body">
           <a class="email-link" href="mailto:aracelidominguezmuelas@gmail.com">aracelidominguezmuelas@gmail.com</a>
+          <p class="email-actions"><button class="copy-email" type="button" data-email="aracelidominguezmuelas@gmail.com" data-done="Dirección copiada" data-error="No se pudo copiar" hidden>Copiar dirección</button> <span class="copy-status" role="status" aria-live="polite"></span></p>
         </div>
       </div>
       <div class="wrap footer-bottom">
@@ -151,5 +173,21 @@
         <a href="#inicio">Volver arriba</a>
       </div>
     </footer>
+    <script>
+      (function () {
+        var btn = document.querySelector('.copy-email');
+        if (!btn || !navigator.clipboard) return;
+        var status = document.querySelector('.copy-status');
+        btn.hidden = false;
+        btn.addEventListener('click', function () {
+          navigator.clipboard.writeText(btn.dataset.email).then(function () {
+            status.textContent = btn.dataset.done;
+          }, function () {
+            status.textContent = btn.dataset.error;
+          });
+          setTimeout(function () { status.textContent = ''; }, 3000);
+        });
+      })();
+    </script>
   </body>
 </html>
