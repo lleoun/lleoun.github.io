@@ -85,7 +85,7 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 4px; border-r
   .route circle:nth-of-type(2) { animation-delay: .75s; }
   .route circle:nth-of-type(3) { animation-delay: 1.15s; }
   .route circle:nth-of-type(4) { animation-delay: 1.55s; }
-  .route circle:last-of-type { animation-delay: 1.95s; }
+  .route circle:last-of-type { animation-delay: 2.1s; }
 }
 @keyframes draw { to { stroke-dashoffset: 0; } }
 @keyframes appear { to { opacity: 1; } }
